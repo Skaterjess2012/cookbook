@@ -75,9 +75,9 @@ body {
 }
 .container a {
   width: 19em;
-  padding: 0.7em;
+  padding: 0.7em 0 0.7em 0;
   border: 0.2em solid #4DA4B7;
-  margin: 0.3em;
+  margin: 0.3em 0 0.3em 0;
   font-size: 0.93em;
   background-color: transparent;
   color: #4DA4B7;
@@ -95,4 +95,27 @@ body {
   color: #D6D6D6;
   background-color: #4DA4B7;
   outline: 0;
+}
+@media (max-width: 40em) {
+  .container .title {
+    width: 100%;
+  }
+  .container .title .logo h1 {
+    font-size: 18vw;
+  }
+  .container .blurb {
+    font-size: 5vw;
+  }
+  @keyframes bar {
+    from {
+      width: 0px;
+    }
+    to {
+      width: 95vw;
+    }
+  }
+  .container a {
+    width: 95%;
+    font-size: 5vw;
+  }
 }

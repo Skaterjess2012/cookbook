@@ -1,0 +1,40 @@
+@bg-color: #D6D6D6;
+@cb-blue: #4DA4B7;
+@cb-orange: #EA863B;
+@font: 'Montserrat', sans-serif;
+@font-size: 0.93em;
+html, body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+body {
+	background-color: @bg-color;
+}
+* {
+	font-family: @font;
+}
+.button () { //use only A tags for buttons
+	width: 19em;
+	padding: 0.7em;
+	border: 0.2em solid @cb-blue;
+	margin: 0.3em;
+	font-size: @font-size;
+	background-color: transparent;
+	color: @cb-blue;
+	transition-duration: 0.3s;
+	cursor: pointer;
+	outline: 0;
+	text-align: center;
+	text-decoration: none;
+	&:hover {
+		color: @bg-color;
+		background-color: @cb-blue;
+	}
+	&:focus {
+		color: @bg-color;
+		background-color: @cb-blue;
+		outline: 0;
+	}
+}

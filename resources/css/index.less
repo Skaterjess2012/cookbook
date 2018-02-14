@@ -10,46 +10,37 @@
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		.logo {
-			display: flex;
-			@keyframes cook {
-				from {margin-right: -1.312em;}
-				to {margin-right: 0;}
-			}
-			@keyframes book {
-				from {margin-left: -1.312em;}
-				to {margin-left: 0;}
-			}
-			h1 {
-				margin: 0.2em 0 0.2em 0;
-			}
-			.cook {
-				animation: cook 0.5s;
-				color: @cb-orange;
+		a {
+			.title-link();
+			.logo {
+				display: flex;
+				@keyframes cook {
+					from {margin-right: -1.312em;}
+					to {margin-right: 0;}
+				}
+				@keyframes book {
+					from {margin-left: -1.312em;}
+					to {margin-left: 0;}
+				}
+				h1 {
+					margin: 0.2em 0 0.2em 0;
+				}
+				.cook {
+					animation: cook 0.5s;
+					color: @cb-orange;
 
-			}
-			.book {
-				animation: book 0.5s;
-				color: @cb-blue;
+				}
+				.book {
+					animation: book 0.5s;
+					color: @cb-blue;
+				}
 			}
 		}
 	}
 	.blurb {
 		margin: 0.5em;
 	}
-	@keyframes bar {
-		from {width: 0px;}
-		to {width: 20em;}
-	}
-	.ani-bar {
-		animation: bar 0.6s;
-		animation-delay: 0.5s;
-		animation-fill-mode: forwards;
-		background-color: @cb-orange;
-		height: 0.13em;
-		margin-bottom: 0.5em;
-	}
-	a {
+	.btn {
 		.button();
 	}
 }
@@ -57,23 +48,18 @@
 	.container {
 		.title {
 			width: 100%;
-			.logo {
-				h1 {
-					font-size: 18vw;
+			a {
+				.logo {
+					h1 {
+						font-size: 18vw;
+					}
 				}
 			}
 		}
 		.blurb {
 			font-size: 5vw;
 		}
-		@keyframes bar {
-			from {width: 0px;}
-			to {width: 95vw;}
-		}
-		.ani-bar {
-		}
-		a {
-			
+		.btn {
 			width: 95%;
 			font-size: 5vw;
 		}

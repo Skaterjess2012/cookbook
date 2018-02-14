@@ -24,7 +24,12 @@ body {
   justify-content: center;
   align-items: center;
 }
-.container .title .logo {
+.container .title a {
+  text-decoration: none;
+  outline: 0;
+  color: #EA863B;
+}
+.container .title a .logo {
   display: flex;
 }
 @keyframes cook {
@@ -43,37 +48,21 @@ body {
     margin-left: 0;
   }
 }
-.container .title .logo h1 {
+.container .title a .logo h1 {
   margin: 0.2em 0 0.2em 0;
 }
-.container .title .logo .cook {
+.container .title a .logo .cook {
   animation: cook 0.5s;
   color: #EA863B;
 }
-.container .title .logo .book {
+.container .title a .logo .book {
   animation: book 0.5s;
   color: #4DA4B7;
 }
 .container .blurb {
   margin: 0.5em;
 }
-@keyframes bar {
-  from {
-    width: 0px;
-  }
-  to {
-    width: 20em;
-  }
-}
-.container .ani-bar {
-  animation: bar 0.6s;
-  animation-delay: 0.5s;
-  animation-fill-mode: forwards;
-  background-color: #EA863B;
-  height: 0.13em;
-  margin-bottom: 0.5em;
-}
-.container a {
+.container .btn {
   width: 19em;
   padding: 0.7em 0 0.7em 0;
   border: 0.2em solid #4DA4B7;
@@ -87,11 +76,11 @@ body {
   text-align: center;
   text-decoration: none;
 }
-.container a:hover {
+.container .btn:hover {
   color: #D6D6D6;
   background-color: #4DA4B7;
 }
-.container a:focus {
+.container .btn:focus {
   color: #D6D6D6;
   background-color: #4DA4B7;
   outline: 0;
@@ -100,21 +89,13 @@ body {
   .container .title {
     width: 100%;
   }
-  .container .title .logo h1 {
+  .container .title a .logo h1 {
     font-size: 18vw;
   }
   .container .blurb {
     font-size: 5vw;
   }
-  @keyframes bar {
-    from {
-      width: 0px;
-    }
-    to {
-      width: 95vw;
-    }
-  }
-  .container a {
+  .container .btn {
     width: 95%;
     font-size: 5vw;
   }

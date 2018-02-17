@@ -56,3 +56,33 @@ body {
 	outline: 0;
 	color: @cb-orange;
 }
+@keyframes navbtnselected {
+	from {
+		width:0%;
+	}
+	to {
+		background: @cb-blue;
+		width:100%;
+	}
+}
+.nav-btn-selected () {
+	transition-duration: 0.5s;
+	width: 100%;
+	height: 0.1em;
+	background: @cb-orange;
+}
+.nav-btn () {
+	color: black;
+	text-decoration: none;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	&:hover {
+		div {
+			transition-duration: 0.5s;
+			width: 100%;
+			background: @cb-blue;
+		}
+	}
+}

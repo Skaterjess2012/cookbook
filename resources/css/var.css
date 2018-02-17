@@ -11,3 +11,12 @@ body {
 * {
   font-family: 'Montserrat', sans-serif;
 }
+@keyframes navbtnselected {
+  from {
+    width: 0%;
+  }
+  to {
+    background: #4DA4B7;
+    width: 100%;
+  }
+}

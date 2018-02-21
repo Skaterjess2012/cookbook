@@ -1,44 +1,36 @@
-function displayImgs() {
-	var content = document.getElementById('content');
-	var count = 1;
-	while (count < 12)
-	{
+function loadimgs() {
+	let content = document.getElementById('content');
+	let count = 1;
+	while (count < 12) {
+
 		img = document.createElement('div'); //create a new img object
 		img.className = "img";
 		img.id = "img-" + count;
-		img.style.background = "lightgray url(../img/" + count +".jpeg) no-repeat center";
+		img.style.background = "lightgrey url(../img/" + count +".jpeg) no-repeat center";
 		img.style.backgroundSize = "cover";
-		content.appendChild(img);
+		img.style.position = "relative";
+		content.append(img);
 
 		imgCover = document.createElement('div');
 		imgCover.className = "img-cover";
 		imgCover.id = "img-cover-" + count;
-		//imgCover.style.width = "100%";
-		//imgCover.style.height = "100%";
-		document.getElementById("img-" + count).appendChild(imgCover);
+		document.getElementById("img-" + count).append(imgCover);
 
-		txtCon = document.createElement('div');
-		txtCon.className = "txt-container";
-		txtCon.id = "txt-container-" + count;
-		txtCon.style.marginTop = "-100%";
-		txtCon.style.height = "100%";
-		txtCon.style.display = "flex";
-		txtCon.style.justifyContent = "center";
-		txtCon.style.alignItems = "flex-end";
-		txtCon.style.background = "transparent";
-		document.getElementById("img-" + count).appendChild(txtCon);
+		imgTxtCon = document.createElement('div');
+		imgTxtCon.className = "img-txt-con";
+		imgTxtCon.id = "img-txt-con-" + count;
+		imgTxtCon.style.position = "absolute";
+		imgTxtCon.style.zIndex = "1";
+		document.getElementById("img-" + count).append(imgTxtCon);
 
-		text = document.createElement('p');
-		text.className = "text";
-		text.id = "text-" + count;
-		text.textContent = "WIP";
-		text.style.color = "white";
-		text.style.fontSize = "5em";
-		text.style.margin = 0;
-		document.getElementById("txt-container-" + count).appendChild(text);
-
-
+		imgTxt = document.createElement('h1');
+		imgTxt.textContent = "WIP";
+		document.getElementById("img-txt-con-" + count).append(imgTxt);
 		count++;
 	}
 }
-displayImgs();
+function imghover() {
+	let imgTxtCon = document.getElementsByClass('img-txt-con');
+	let imgCover = document.getElementsByClass('img-cover');
+}
+loadimgs();

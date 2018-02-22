@@ -107,6 +107,5 @@ body {
   background: transparent;
 }
 .container .content .img .img-txt-con:hover {
-  background: linear-gradient(transparent 60%, black) black;
   opacity: 0.3;
 }

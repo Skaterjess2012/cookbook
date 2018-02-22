@@ -29,8 +29,13 @@ function loadimgs() {
 		count++;
 	}
 }
-function imghover() {
-	let imgTxtCon = document.getElementsByClass('img-txt-con');
-	let imgCover = document.getElementsByClass('img-cover');
+function imgMouseEvent() {
+	let count;
+	function mouseover(){}
+	function mouseout(){}
+	while (count < 12) {
+		let object = document.getElementById("img-cover-" + count);
+
+	}
 }
 loadimgs();
